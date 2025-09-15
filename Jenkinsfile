@@ -4,7 +4,6 @@ pipeline {
         stage('1. Clonar Código') {
             steps {
                 echo 'Obteniendo el código más reciente desde GitHub...'
-                // ▼▼▼ ¡¡IMPORTANTE!! Cambia esta URL por la de tu repositorio ▼▼▼
                 git url: 'https://github.com/JJSS25/Mi-Sitio-Jenkins.git', branch: 'main'
             }
         }
@@ -13,6 +12,6 @@ pipeline {
                 echo 'Copiando archivos al servidor Nginx...'
                 sh 'cp -f *.html /var/website-data/'
             }
-        }
-    }
+        }
+    }
 }
